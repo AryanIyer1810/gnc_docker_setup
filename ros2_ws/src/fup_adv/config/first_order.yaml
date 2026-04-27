@@ -1,0 +1,10 @@
+first_order_consensus:
+  ros__parameters:
+    n: 3
+    takeoff_alt: 2.5
+    side: 2.5
+    kC: 1.0
+    kL: 0.6
+    v_max: 1.5
+    leader_radius: 3.0
+    leader_omega: 0.15

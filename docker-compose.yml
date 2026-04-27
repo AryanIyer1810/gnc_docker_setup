@@ -1,17 +1,19 @@
-version: '3.8'
-
 services:
   gnc_sim:
     build: .
     image: gnc_workshop_master:v1
     container_name: advanced_gnc_env
     privileged: true
+    tty: true          # <--- CRITICAL: KEEPS CONTAINER ALIVE
+    stdin_open: true   # <--- CRITICAL: KEEPS CONTAINER ALIVE
+    command: bash      # <--- CRITICAL: OVERRIDES TERMINATOR
     shm_size: '2gb'
+    network_mode: "host"
     environment:
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
       - MESA_GL_VERSION_OVERRIDE=4.5 
-      - ROS_DOMAIN_ID=0
+      - ROS_DOMAIN_ID=12 #Change this value based on the group numbers assigned
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - ./ros2_ws/src/fup_adv:/home/gnc_user/ros2_ws/src/fup_adv:rw

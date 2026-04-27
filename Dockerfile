@@ -109,17 +109,17 @@ RUN echo "source /opt/ros/humble/setup.bash" >> /home/$USERNAME/.bashrc \
     && echo "export GZ_VERSION=harmonic" >> /home/$USERNAME/.bashrc \
     && echo "alias start_agent='MicroXRCEAgent udp4 -p 8888'" >> /home/$USERNAME/.bashrc \
     && echo "alias refresh_gazebo='pkill -9 ruby; pkill -9 gz; pkill -9 px4'" >> /home/$USERNAME/.bashrc \
-    && echo "export ROS_LOCALHOST_ONLY=1" >> /home/$USERNAME/.bashrc \
-    && echo "export ROS_DOMAIN_ID=0" >> /home/$USERNAME/.bashrc \
+    && echo "export ROS_LOCALHOST_ONLY=0" >> /home/$USERNAME/.bashrc \
     && echo "alias qgc='/home/$USERNAME/squashfs-root/AppRun'" >> /home/$USERNAME/.bashrc \
     && sudo chmod +x /home/$USERNAME/ros2_ws/src/fup_adv/launch_swarm.sh \
     # RESTORED: Appended the custom px4_worlds folder to Gazebo's resource path!
     && echo "export GZ_SIM_RESOURCE_PATH=\$GZ_SIM_RESOURCE_PATH:/home/$USERNAME/PX4-Autopilot/Tools/simulation/gz/worlds:/home/$USERNAME/PX4-Autopilot/Tools/simulation/gz/models:/home/$USERNAME/px4_worlds" >> /home/$USERNAME/.bashrc 
 
+RUN pip3 install JSBSim
 # --- PERMANENT FASTDDS NETWORK FIX ---
 COPY --chown=gnc_user:gnc_user fastdds.xml /home/gnc_user/fastdds.xml
 
 RUN echo "export FASTRTPS_DEFAULT_PROFILES_FILE=/home/gnc_user/fastdds.xml" >> /home/gnc_user/.bashrc \
-    && echo "export ROS_LOCALHOST_ONLY=1" >> /home/gnc_user/.bashrc
+    && echo "export ROS_LOCALHOST_ONLY=0" >> /home/gnc_user/.bashrc
 
 CMD ["terminator"]

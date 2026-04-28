@@ -1,3 +1,4 @@
+k
 # GNC Workshop — Environment Setup
 
 Welcome to the GNC Workshop. This repository contains everything you need to install and run the simulation environment on your machine.
@@ -11,7 +12,7 @@ Before you begin, select the guide for your operating system:
 | Operating System | Setup Guide |
 |---|---|
 | **Windows 11** | [Windows 11 Setup Guide](./README_Windows.md) |
-| **Ubuntu** | Coming soon |
+| **Ubuntu 20.04 and higher** | [Ubuntu Setup Guide](./README_Ubuntu.md) |
 
 ---
 

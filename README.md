@@ -1,4 +1,3 @@
-k
 # GNC Workshop — Environment Setup
 
 Welcome to the GNC Workshop. This repository contains everything you need to install and run the simulation environment on your machine.

@@ -2,16 +2,21 @@
 
 Welcome to the GNC Workshop. This repository contains everything you need to install and run the simulation environment on your machine.
 
-Before you begin, select the guide for your operating system:
-
 ---
 
-## Choose Your Platform
+<div align="center">
 
-| Operating System | Setup Guide |
-|---|---|
-| **Windows 11** | [Windows 11 Setup Guide](./README_Windows.md) |
-| **Ubuntu 20.04 and higher** | [Ubuntu Setup Guide](./README_Ubuntu.md) |
+### Step 1 — Choose your operating system and follow the setup guide
+
+[![Windows 11 Setup Guide](https://img.shields.io/badge/Setup_Guide-Windows_11-0078D4?style=for-the-badge&logo=windows11&logoColor=white)](./README_Windows.md)
+&nbsp;
+[![Ubuntu Setup Guide](https://img.shields.io/badge/Setup_Guide-Ubuntu_20.04+-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](./README_Ubuntu.md)
+
+### Step 2 — Once installed, open the command reference during your session
+
+[![Workshop Command Reference](https://img.shields.io/badge/Workshop-Command_Reference-2ea44f?style=for-the-badge&logo=gnu-bash&logoColor=white)](./WORKSHOP_COMMANDS.md)
+
+</div>
 
 ---
 
@@ -31,8 +36,11 @@ All software is free and open source. No prior Linux or Docker experience is req
 gnc_docker_setup/
 ├── README.md                        (this file)
 ├── README_Windows.md                (Windows 11 setup guide)
+├── README_Ubuntu.md                 (Ubuntu setup guide)
+├── WORKSHOP_COMMANDS.md             (in-session command reference)
 ├── docker-compose.yml
 ├── docker-compose.intel_amd.yml
+├── docker-compose.nvidia.yml
 └── gnc_workshop_master_v1.tar       (download separately — see setup guide)
 ```
 

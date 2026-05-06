@@ -2,6 +2,9 @@
 
 Welcome to the GNC Workshop. This repository contains everything you need to install and run the simulation environment on your machine.
 
+### 🚁 [Formation Control Experiment](https://github.com/Cramer54/px4-ros2-consensus-demo/tree/main)
+*Click the link above to view the original consensus and Olfati-Saber swarm repository.*
+
 ---
 
 <div align="center">
@@ -31,8 +34,7 @@ All software is free and open source. No prior Linux or Docker experience is req
 ---
 
 ## Repository Contents
-
-```
+```text
 gnc_docker_setup/
 ├── README.md                        (this file)
 ├── README_Windows.md                (Windows 11 setup guide)
@@ -44,6 +46,4 @@ gnc_docker_setup/
 └── gnc_workshop_master_v1.tar       (download separately — see setup guide)
 ```
 
----
-
-For issues, contact us at [30006050@iitb.ac.in](mailto:30006050@iitb.ac.in).
+For issues, contact us at 30006050@iitb.ac.in.
